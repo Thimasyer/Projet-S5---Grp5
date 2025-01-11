@@ -1,0 +1,55 @@
+\doxysection{Robot\+Putter\+Sensors.\+h}
+\hypertarget{_robot_putter_sensors_8h_source}{}\label{_robot_putter_sensors_8h_source}\index{RobotPutter\_Sensors/RobotPutterSensors.h@{RobotPutter\_Sensors/RobotPutterSensors.h}}
+\mbox{\hyperlink{_robot_putter_sensors_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/***********\ \ COPMMENTAIRE\ DOXYGEN\ D'EN\ TETE-\/FICHIER\ ***************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ @file\ RobotPutterSensors.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ @brief\ Librairie\ pour\ lire\ les\ valeurs\ des\ différents\ capteurs.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ This\ library\ provides:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ -\/\ a\ function\ to\ read\ the\ distance\ measured\ by}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ two\ HC-\/SR04\ ultrasonic\ sensors,\ returning\ the\ values\ as\ a\ structure.}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ \ \ \ \ \ -\/\ a\ fonction\ to\ read\ the\ values\ of\ the\ line\ sensors,\ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ returning\ the\ values\ as\ a\ structure.}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ ******************************************************************************/}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ ROBOTPUTTERSENSORS\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ ROBOTPUTTERSENSORS\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ Lib\ packages\ includes,\ compiler\ define}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <Arduino.h>}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ Declaration\ structs,\ unions,\ enums,\ bitfields,\ typedefs}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00022\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structs_sensor_values}{sSensorValues}}\ }
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structs_sensor_values_a970f22facbe598291f991e908c6c2996}{fDistance1}};\ \ \ \ \textcolor{comment}{//\ Distance\ measured\ by\ the\ first\ sensor\ in\ cm\ }}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structs_sensor_values_a5abcdf4ccface615c52ec0e36192b5d5}{fDistance2}};\ \ \ \ \textcolor{comment}{//\ Distance\ measured\ by\ the\ second\ sensor\ in\ cm\ }}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structs_sensor_values_a23037cf09725b811ac431e0a95cc7fe2}{bC1IsOnTheLine}};\ \textcolor{comment}{//\ True\ if\ the\ first\ line\ sensor\ is\ on\ the\ line}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structs_sensor_values_af90bad044cc95c560c67549290cd18dd}{bC2IsOnTheLine}};\ \textcolor{comment}{//\ True\ if\ the\ second\ line\ sensor\ is\ on\ the\ line}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structs_sensor_values_afb4e63eb7faed24bd545f4bb6a6c9c1b}{bC3IsOnTheLine}};\ \textcolor{comment}{//\ True\ if\ the\ third\ line\ sensor\ is\ on\ the\ line}}
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ Declaration\ class\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00033\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00034\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ultrasonic_sensors_aecb3511f6d8addefb6e447a9156501ca}{UltrasonicSensors}}\ }
+\DoxyCodeLine{00035\ \{}
+\DoxyCodeLine{00036\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_ultrasonic_sensors_aecb3511f6d8addefb6e447a9156501ca}{UltrasonicSensors}}(\textcolor{keyword}{const}\ uint8\_t\ cu8TrigPin1,\ \textcolor{keyword}{const}\ uint8\_t\ cu8EchoPin1,\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ cu8TrigPin2,\ \textcolor{keyword}{const}\ uint8\_t\ cu8EchoPin2);}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{structs_sensor_values}{sSensorValues}}\ \mbox{\hyperlink{class_ultrasonic_sensors_a579f786b3c617129ebd7ef2899cbd812}{sReadDistances}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ cu8TrigPin1;}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ cu8EchoPin1;}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ cu8TrigPin2;}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ cu8EchoPin2;}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{float}\ fMeasureDistance(\textcolor{keyword}{const}\ uint8\_t\ cu8TrigPin,\ \textcolor{keyword}{const}\ uint8\_t\ cu8EchoPin);}
+\DoxyCodeLine{00047\ \};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ROBOTPUTTERSENSORS\_H}}
+
+\end{DoxyCode}

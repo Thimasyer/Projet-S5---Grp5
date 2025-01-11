@@ -1,0 +1,31 @@
+\doxysection{Motor\+Control.\+h}
+\hypertarget{_motor_control_8h_source}{}\label{_motor_control_8h_source}\index{Motor\_Control/MotorControl.h@{Motor\_Control/MotorControl.h}}
+\mbox{\hyperlink{_motor_control_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/***********\ \ FILE\ HEADER\ ********************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ @file\ MotorControl.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ @brief\ Header\ for\ controlling\ two\ DC\ motors\ using\ a\ motor\ driver.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *********************************************************************************/}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ MOTORCONTROL\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ MOTORCONTROL\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ Définition\ des\ moteurs}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ MOTOR\_LEFT\ 0}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ MOTOR\_RIGHT\ 1}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ Définition\ des\ directions\ du\ moteur}}
+\DoxyCodeLine{00014\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ }
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{_motor_control_8h_ab0dd3595d7049b92115a766f0ea6f7e0aa26736999186daf8146f809e863712a1}{FORWARD}}\ =\ 0,}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{_motor_control_8h_ab0dd3595d7049b92115a766f0ea6f7e0afed2fca77e454294d6b8bda1bf2c9fd6}{BACKWARD}}}
+\DoxyCodeLine{00018\ \}\ \mbox{\hyperlink{_motor_control_8h_ab0dd3595d7049b92115a766f0ea6f7e0}{MotorDirection}};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ Prototypes\ des\ fonctions}}
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_motor_control_8h_ac5c564b4ded92746df5fdd51deed9739}{vMotorDriverInit}}(uint16\_t\ u16DirPinL,\ uint16\_t\ u16PwmPinL,\ uint16\_t\ u16DirPinR,\ uint16\_t\ u16PwmPinR);}
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_motor_control_8h_a161d4dc8fc78cd9ceb5bd7e3756bc4ce}{vSetMotor}}(uint16\_t\ u16MotorID,\ \mbox{\hyperlink{_motor_control_8h_ab0dd3595d7049b92115a766f0ea6f7e0}{MotorDirection}}\ eDirection,\ uint16\_t\ u16Speed);}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_motor_control_8h_aea713e8d378ae8b9c52e7fa584f6e53b}{vStopMotor}}(uint16\_t\ u16MotorID);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MOTORCONTROL\_H}}
+
+\end{DoxyCode}

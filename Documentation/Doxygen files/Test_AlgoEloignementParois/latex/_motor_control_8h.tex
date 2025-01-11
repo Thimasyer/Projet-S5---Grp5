@@ -1,0 +1,137 @@
+\doxysection{Référence du fichier Motor\+\_\+\+Control/\+Motor\+Control.h}
+\hypertarget{_motor_control_8h}{}\label{_motor_control_8h}\index{Motor\_Control/MotorControl.h@{Motor\_Control/MotorControl.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Graphe des dépendances par inclusion de Motor\+Control.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{_motor_control_8h__incl}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{_motor_control_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_motor_control_8h_a0e2d750df9008232cafa398d2424b778}{MOTOR\+\_\+\+LEFT}}~0
+\item 
+\#define \mbox{\hyperlink{_motor_control_8h_a9eff471d17bc68f18b14ff75f23aa3bc}{MOTOR\+\_\+\+RIGHT}}~1
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Énumérations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_motor_control_8h_ab0dd3595d7049b92115a766f0ea6f7e0}{Motor\+Direction}} \{ \mbox{\hyperlink{_motor_control_8h_ab0dd3595d7049b92115a766f0ea6f7e0aa26736999186daf8146f809e863712a1}{FORWARD}} = 0
+, \mbox{\hyperlink{_motor_control_8h_ab0dd3595d7049b92115a766f0ea6f7e0afed2fca77e454294d6b8bda1bf2c9fd6}{BACKWARD}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_motor_control_8h_ac5c564b4ded92746df5fdd51deed9739}{v\+Motor\+Driver\+Init}} (uint16\+\_\+t u16\+Dir\+PinL, uint16\+\_\+t u16\+Pwm\+PinL, uint16\+\_\+t u16\+Dir\+PinR, uint16\+\_\+t u16\+Pwm\+PinR)
+\begin{DoxyCompactList}\small\item\em Initialisation des pins du driver moteur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_motor_control_8h_a161d4dc8fc78cd9ceb5bd7e3756bc4ce}{v\+Set\+Motor}} (uint16\+\_\+t u16\+Motor\+ID, \mbox{\hyperlink{_motor_control_8h_ab0dd3595d7049b92115a766f0ea6f7e0}{Motor\+Direction}} e\+Direction, uint16\+\_\+t u16\+Speed)
+\begin{DoxyCompactList}\small\item\em Contrôle un moteur (vitesse et direction) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_motor_control_8h_aea713e8d378ae8b9c52e7fa584f6e53b}{v\+Stop\+Motor}} (uint16\+\_\+t u16\+Motor\+ID)
+\begin{DoxyCompactList}\small\item\em Arrête un moteur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des macros}
+\Hypertarget{_motor_control_8h_a0e2d750df9008232cafa398d2424b778}\index{MotorControl.h@{MotorControl.h}!MOTOR\_LEFT@{MOTOR\_LEFT}}
+\index{MOTOR\_LEFT@{MOTOR\_LEFT}!MotorControl.h@{MotorControl.h}}
+\doxysubsubsection{\texorpdfstring{MOTOR\_LEFT}{MOTOR\_LEFT}}
+{\footnotesize\ttfamily \label{_motor_control_8h_a0e2d750df9008232cafa398d2424b778} 
+\#define MOTOR\+\_\+\+LEFT~0}
+
+\Hypertarget{_motor_control_8h_a9eff471d17bc68f18b14ff75f23aa3bc}\index{MotorControl.h@{MotorControl.h}!MOTOR\_RIGHT@{MOTOR\_RIGHT}}
+\index{MOTOR\_RIGHT@{MOTOR\_RIGHT}!MotorControl.h@{MotorControl.h}}
+\doxysubsubsection{\texorpdfstring{MOTOR\_RIGHT}{MOTOR\_RIGHT}}
+{\footnotesize\ttfamily \label{_motor_control_8h_a9eff471d17bc68f18b14ff75f23aa3bc} 
+\#define MOTOR\+\_\+\+RIGHT~1}
+
+
+
+\doxysubsection{Documentation du type de l\textquotesingle{}énumération}
+\Hypertarget{_motor_control_8h_ab0dd3595d7049b92115a766f0ea6f7e0}\index{MotorControl.h@{MotorControl.h}!MotorDirection@{MotorDirection}}
+\index{MotorDirection@{MotorDirection}!MotorControl.h@{MotorControl.h}}
+\doxysubsubsection{\texorpdfstring{MotorDirection}{MotorDirection}}
+{\footnotesize\ttfamily \label{_motor_control_8h_ab0dd3595d7049b92115a766f0ea6f7e0} 
+enum \mbox{\hyperlink{_motor_control_8h_ab0dd3595d7049b92115a766f0ea6f7e0}{Motor\+Direction}}}
+
+\begin{DoxyEnumFields}[2]{Valeurs énumérées}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FORWARD@{FORWARD}!MotorControl.h@{MotorControl.h}}\index{MotorControl.h@{MotorControl.h}!FORWARD@{FORWARD}}}\Hypertarget{_motor_control_8h_ab0dd3595d7049b92115a766f0ea6f7e0aa26736999186daf8146f809e863712a1}\label{_motor_control_8h_ab0dd3595d7049b92115a766f0ea6f7e0aa26736999186daf8146f809e863712a1} 
+FORWARD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BACKWARD@{BACKWARD}!MotorControl.h@{MotorControl.h}}\index{MotorControl.h@{MotorControl.h}!BACKWARD@{BACKWARD}}}\Hypertarget{_motor_control_8h_ab0dd3595d7049b92115a766f0ea6f7e0afed2fca77e454294d6b8bda1bf2c9fd6}\label{_motor_control_8h_ab0dd3595d7049b92115a766f0ea6f7e0afed2fca77e454294d6b8bda1bf2c9fd6} 
+BACKWARD&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{_motor_control_8h_ac5c564b4ded92746df5fdd51deed9739}\index{MotorControl.h@{MotorControl.h}!vMotorDriverInit@{vMotorDriverInit}}
+\index{vMotorDriverInit@{vMotorDriverInit}!MotorControl.h@{MotorControl.h}}
+\doxysubsubsection{\texorpdfstring{vMotorDriverInit()}{vMotorDriverInit()}}
+{\footnotesize\ttfamily \label{_motor_control_8h_ac5c564b4ded92746df5fdd51deed9739} 
+void v\+Motor\+Driver\+Init (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{u16\+Dir\+PinL}{, }\item[{uint16\+\_\+t}]{u16\+Pwm\+PinL}{, }\item[{uint16\+\_\+t}]{u16\+Dir\+PinR}{, }\item[{uint16\+\_\+t}]{u16\+Pwm\+PinR}{}\end{DoxyParamCaption})}
+
+
+
+Initialisation des pins du driver moteur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em u16\+Dir\+PinL} & Pin direction pour le moteur gauche \\
+\hline
+{\em u16\+Pwm\+PinL} & Pin PWM pour le moteur gauche \\
+\hline
+{\em u16\+Dir\+PinR} & Pin direction pour le moteur droit \\
+\hline
+{\em u16\+Pwm\+PinR} & Pin PWM pour le moteur droit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Cette fonction doit être appelée avant d\textquotesingle{}utiliser les moteurs 
+\end{DoxyNote}
+\Hypertarget{_motor_control_8h_a161d4dc8fc78cd9ceb5bd7e3756bc4ce}\index{MotorControl.h@{MotorControl.h}!vSetMotor@{vSetMotor}}
+\index{vSetMotor@{vSetMotor}!MotorControl.h@{MotorControl.h}}
+\doxysubsubsection{\texorpdfstring{vSetMotor()}{vSetMotor()}}
+{\footnotesize\ttfamily \label{_motor_control_8h_a161d4dc8fc78cd9ceb5bd7e3756bc4ce} 
+void v\+Set\+Motor (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{u16\+Motor\+ID}{, }\item[{\mbox{\hyperlink{_motor_control_8h_ab0dd3595d7049b92115a766f0ea6f7e0}{Motor\+Direction}}}]{e\+Direction}{, }\item[{uint16\+\_\+t}]{u16\+Speed}{}\end{DoxyParamCaption})}
+
+
+
+Contrôle un moteur (vitesse et direction) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em u16\+Motor\+ID} & Identifiant du moteur (MOTOR\+\_\+\+LEFT ou MOTOR\+\_\+\+RIGHT) \\
+\hline
+{\em e\+Direction} & Direction du moteur (FORWARD = LOW ou BACKWARD = HIGH) \\
+\hline
+{\em u16\+Speed} & Vitesse du moteur (0 à 255) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_motor_control_8h_aea713e8d378ae8b9c52e7fa584f6e53b}\index{MotorControl.h@{MotorControl.h}!vStopMotor@{vStopMotor}}
+\index{vStopMotor@{vStopMotor}!MotorControl.h@{MotorControl.h}}
+\doxysubsubsection{\texorpdfstring{vStopMotor()}{vStopMotor()}}
+{\footnotesize\ttfamily \label{_motor_control_8h_aea713e8d378ae8b9c52e7fa584f6e53b} 
+void v\+Stop\+Motor (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{u16\+Motor\+ID}{}\end{DoxyParamCaption})}
+
+
+
+Arrête un moteur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em u16\+Motor\+ID} & Identifiant du moteur à arrête \\
+\hline
+\end{DoxyParams}

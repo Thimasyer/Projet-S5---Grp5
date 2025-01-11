@@ -1,0 +1,59 @@
+\doxysection{Référence de la classe Ultrasonic\+Sensors}
+\hypertarget{class_ultrasonic_sensors}{}\label{class_ultrasonic_sensors}\index{UltrasonicSensors@{UltrasonicSensors}}
+
+
+{\ttfamily \#include $<$Robot\+Putter\+Sensors.\+h$>$}
+
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ultrasonic_sensors_aecb3511f6d8addefb6e447a9156501ca}{Ultrasonic\+Sensors}} (const uint8\+\_\+t cu8\+Trig\+Pin1, const uint8\+\_\+t cu8\+Echo\+Pin1, const uint8\+\_\+t cu8\+Trig\+Pin2, const uint8\+\_\+t cu8\+Echo\+Pin2)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_ultrasonic_sensors}{Ultrasonic\+Sensors}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structs_sensor_values}{s\+Sensor\+Values}} \mbox{\hyperlink{class_ultrasonic_sensors_a579f786b3c617129ebd7ef2899cbd812}{s\+Read\+Distances}} ()
+\begin{DoxyCompactList}\small\item\em Reads distances from the two sensors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{class_ultrasonic_sensors_aecb3511f6d8addefb6e447a9156501ca}\index{UltrasonicSensors@{UltrasonicSensors}!UltrasonicSensors@{UltrasonicSensors}}
+\index{UltrasonicSensors@{UltrasonicSensors}!UltrasonicSensors@{UltrasonicSensors}}
+\doxysubsubsection{\texorpdfstring{UltrasonicSensors()}{UltrasonicSensors()}}
+{\footnotesize\ttfamily \label{class_ultrasonic_sensors_aecb3511f6d8addefb6e447a9156501ca} 
+Ultrasonic\+Sensors\+::\+Ultrasonic\+Sensors (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{cu8\+Trig\+Pin1}{, }\item[{const uint8\+\_\+t}]{cu8\+Echo\+Pin1}{, }\item[{const uint8\+\_\+t}]{cu8\+Trig\+Pin2}{, }\item[{const uint8\+\_\+t}]{cu8\+Echo\+Pin2}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{class_ultrasonic_sensors}{Ultrasonic\+Sensors}. 
+
+\+: cu8\+Trig\+Pin1(cu8\+Trig\+Pin1), cu8\+Echo\+Pin1(cu8\+Echo\+Pin1), cu8\+Trig\+Pin2(cu8\+Trig\+Pin2), cu8\+Echo\+Pin2(cu8\+Echo\+Pin2) 
+\begin{DoxyParams}{Paramètres}
+{\em cu8\+Trig\+Pin1} & Trigger pin for the first HC-\/\+SR04 sensor \\
+\hline
+{\em cu8\+Echo\+Pin1} & Echo pin for the first HC-\/\+SR04 sensor \\
+\hline
+{\em cu8\+Trig\+Pin2} & Trigger pin for the second HC-\/\+SR04 sensor \\
+\hline
+{\em cu8\+Echo\+Pin2} & Echo pin for the second HC-\/\+SR04 sensor \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_ultrasonic_sensors_a579f786b3c617129ebd7ef2899cbd812}\index{UltrasonicSensors@{UltrasonicSensors}!sReadDistances@{sReadDistances}}
+\index{sReadDistances@{sReadDistances}!UltrasonicSensors@{UltrasonicSensors}}
+\doxysubsubsection{\texorpdfstring{sReadDistances()}{sReadDistances()}}
+{\footnotesize\ttfamily \label{class_ultrasonic_sensors_a579f786b3c617129ebd7ef2899cbd812} 
+\mbox{\hyperlink{structs_sensor_values}{s\+Sensor\+Values}} Ultrasonic\+Sensors\+::s\+Read\+Distances (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Reads distances from the two sensors. 
+
+\begin{DoxyReturn}{Renvoie}
+A Sensor\+Distances structure containing the distances in cm 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+Robot\+Putter\+\_\+\+Sensors/\mbox{\hyperlink{_robot_putter_sensors_8h}{Robot\+Putter\+Sensors.\+h}}\item 
+Robot\+Putter\+\_\+\+Sensors/\mbox{\hyperlink{_robot_putter_sensors_8cpp}{Robot\+Putter\+Sensors.\+cpp}}\end{DoxyCompactItemize}

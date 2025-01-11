@@ -1,0 +1,82 @@
+\doxysection{Référence du fichier Motor\+\_\+\+Control/\+Motor\+Control.cpp}
+\hypertarget{_motor_control_8cpp}{}\label{_motor_control_8cpp}\index{Motor\_Control/MotorControl.cpp@{Motor\_Control/MotorControl.cpp}}
+{\ttfamily \#include "{}Motor\+Control.\+h"{}}\newline
+{\ttfamily \#include "{}Arduino.\+h"{}}\newline
+Graphe des dépendances par inclusion de Motor\+Control.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{_motor_control_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_motor_control_8cpp_ac5c564b4ded92746df5fdd51deed9739}{v\+Motor\+Driver\+Init}} (uint16\+\_\+t u16\+Dir\+PinL, uint16\+\_\+t u16\+Pwm\+PinL, uint16\+\_\+t u16\+Dir\+PinR, uint16\+\_\+t u16\+Pwm\+PinR)
+\begin{DoxyCompactList}\small\item\em Initialisation des pins du driver moteur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_motor_control_8cpp_a161d4dc8fc78cd9ceb5bd7e3756bc4ce}{v\+Set\+Motor}} (uint16\+\_\+t u16\+Motor\+ID, \mbox{\hyperlink{_motor_control_8h_ab0dd3595d7049b92115a766f0ea6f7e0}{Motor\+Direction}} e\+Direction, uint16\+\_\+t u16\+Speed)
+\begin{DoxyCompactList}\small\item\em Contrôle un moteur (vitesse et direction) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_motor_control_8cpp_aea713e8d378ae8b9c52e7fa584f6e53b}{v\+Stop\+Motor}} (uint16\+\_\+t u16\+Motor\+ID)
+\begin{DoxyCompactList}\small\item\em Arrête un moteur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{_motor_control_8cpp_ac5c564b4ded92746df5fdd51deed9739}\index{MotorControl.cpp@{MotorControl.cpp}!vMotorDriverInit@{vMotorDriverInit}}
+\index{vMotorDriverInit@{vMotorDriverInit}!MotorControl.cpp@{MotorControl.cpp}}
+\doxysubsubsection{\texorpdfstring{vMotorDriverInit()}{vMotorDriverInit()}}
+{\footnotesize\ttfamily \label{_motor_control_8cpp_ac5c564b4ded92746df5fdd51deed9739} 
+void v\+Motor\+Driver\+Init (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{u16\+Dir\+PinL}{, }\item[{uint16\+\_\+t}]{u16\+Pwm\+PinL}{, }\item[{uint16\+\_\+t}]{u16\+Dir\+PinR}{, }\item[{uint16\+\_\+t}]{u16\+Pwm\+PinR}{}\end{DoxyParamCaption})}
+
+
+
+Initialisation des pins du driver moteur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em u16\+Dir\+PinL} & Pin direction pour le moteur gauche \\
+\hline
+{\em u16\+Pwm\+PinL} & Pin PWM pour le moteur gauche \\
+\hline
+{\em u16\+Dir\+PinR} & Pin direction pour le moteur droit \\
+\hline
+{\em u16\+Pwm\+PinR} & Pin PWM pour le moteur droit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Cette fonction doit être appelée avant d\textquotesingle{}utiliser les moteurs 
+\end{DoxyNote}
+\Hypertarget{_motor_control_8cpp_a161d4dc8fc78cd9ceb5bd7e3756bc4ce}\index{MotorControl.cpp@{MotorControl.cpp}!vSetMotor@{vSetMotor}}
+\index{vSetMotor@{vSetMotor}!MotorControl.cpp@{MotorControl.cpp}}
+\doxysubsubsection{\texorpdfstring{vSetMotor()}{vSetMotor()}}
+{\footnotesize\ttfamily \label{_motor_control_8cpp_a161d4dc8fc78cd9ceb5bd7e3756bc4ce} 
+void v\+Set\+Motor (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{u16\+Motor\+ID}{, }\item[{\mbox{\hyperlink{_motor_control_8h_ab0dd3595d7049b92115a766f0ea6f7e0}{Motor\+Direction}}}]{e\+Direction}{, }\item[{uint16\+\_\+t}]{u16\+Speed}{}\end{DoxyParamCaption})}
+
+
+
+Contrôle un moteur (vitesse et direction) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em u16\+Motor\+ID} & Identifiant du moteur (MOTOR\+\_\+\+LEFT ou MOTOR\+\_\+\+RIGHT) \\
+\hline
+{\em e\+Direction} & Direction du moteur (FORWARD = LOW ou BACKWARD = HIGH) \\
+\hline
+{\em u16\+Speed} & Vitesse du moteur (0 à 255) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_motor_control_8cpp_aea713e8d378ae8b9c52e7fa584f6e53b}\index{MotorControl.cpp@{MotorControl.cpp}!vStopMotor@{vStopMotor}}
+\index{vStopMotor@{vStopMotor}!MotorControl.cpp@{MotorControl.cpp}}
+\doxysubsubsection{\texorpdfstring{vStopMotor()}{vStopMotor()}}
+{\footnotesize\ttfamily \label{_motor_control_8cpp_aea713e8d378ae8b9c52e7fa584f6e53b} 
+void v\+Stop\+Motor (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{u16\+Motor\+ID}{}\end{DoxyParamCaption})}
+
+
+
+Arrête un moteur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em u16\+Motor\+ID} & Identifiant du moteur à arrête \\
+\hline
+\end{DoxyParams}

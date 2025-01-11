@@ -1,0 +1,18 @@
+- fonction BL émettrice: 		envoi les données de tout les capteurs + état en cours
+
+- fonction BL réceptrice: 		si message dispo, appel fonction découpage
+
+- fonction découpage donnée BL: 	découpe XX;XX;XX et mets à jour (si XX != 00) la struct à partir des chiffres contenue dans les 3 commandes
+**** Dans Main ****** :		dès qu'une valeur de la struct est lu, mise à 00 pour ne plus être lu
+
+
+- tester enchainnement FollowLine et Adjust on T
+	+ rajouter que faire si le robot passe par dessus la ligne
+
+
+
+
+
+
+
+				
