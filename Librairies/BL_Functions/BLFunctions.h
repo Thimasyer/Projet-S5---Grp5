@@ -22,8 +22,8 @@
 #include "State.h"
 
 // Define default RX/TX pins for Bluetooth
-#define HC05_RX_PIN 3
-#define HC05_TX_PIN 2
+#define HC05_RX_PIN 2    // à brancher en croisé avec l'Arduino    
+#define HC05_TX_PIN 3
 
 
 // -----------------------------------------------------------------------------

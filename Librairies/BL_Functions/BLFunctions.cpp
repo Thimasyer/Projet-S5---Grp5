@@ -52,8 +52,15 @@ void BLFunctions::vReceiveData()
     while (oBTSerial.available())
     {
         char c = oBTSerial.read();
-        if (c == '\n') // End of message
+        #if DEBUG
+        Serial.print(c);
+        #endif
+        if (c == '#') // End of message
         {
+            #if DEBUG
+            Serial.print("La chaine complète:");
+            Serial.println(sBuffer);
+            #endif
             vParseData(sBuffer);
             sBuffer = ""; // Clear buffer
             bCommandAvailable = true;
@@ -76,10 +83,10 @@ void BLFunctions::vParseData(const String& sData)
     // Searrch the first occurrence of ';' at the position iDelim1 + 1
     int iDelim2 = sData.indexOf(';', iDelim1 + 1);
     // Same logic as above
-    int iDelim3 = sData.indexOf(';', iDelim2 + 1);
+    int iDelim3 = sData.indexOf('#', iDelim2 + 1);
 
     // indexOf return -1 if not found
-    if (iDelim1 != -1 && iDelim2 != -1 && iDelim3 != -1)
+    if (iDelim1 != -1 && iDelim2 != -1)
     {
         ui16AdjustHeight = sData.substring(0, iDelim1).toInt();
         ui16AdjustAngle = sData.substring(iDelim1 + 1, iDelim2).toInt();

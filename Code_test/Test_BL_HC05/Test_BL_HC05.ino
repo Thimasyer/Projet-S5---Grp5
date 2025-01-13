@@ -45,40 +45,51 @@
 
 #include "SoftwareSerial.h"
 #include <String.h>
-SoftwareSerial mySerial(2, 3); // broshes TX, RX
+SoftwareSerial mySerial(2, 3); // broshes RX, TX de l'Arduino 
+                                // à brancher en croisé avec le module HC05
 
 int val;
 String sBuffer;
 
-void setup() {
+void setup() 
+{
   Serial.begin(9600);
   mySerial.begin(38400);
-  pinMode(13, OUTPUT);
+  Serial.println("Entrez une commande AT:");
 }
 
-void loop() {
-  if (mySerial.available()) {
+void loop() 
+{
+  // // Continuez à lire à partir du HC-05 et envoyez-le au moniteur série Arduino
+  // if (BTSerial.available())
+  // {
+  //   //Serial.println("Reading BL and writing to serial");
+  //   Serial.write(BTSerial.read());
+  //   delay(100); 
+  // }
 
-    //val = mySerial.read();
-    Serial.println(val);
-    if (val == '1') {digitalWrite(13, HIGH);}
-    if (val == '0') {digitalWrite(13, LOW);}
+  // // Continuez à lire depuis le moniteur série Arduino et envoyez-le au HC-05
+  // if (Serial.available())
+  // {
+  //   //Serial.println("Reading serial and writing to BL");
+  //   BTSerial.write(Serial.read());
+  //   delay(100);
+  // }
 
-    while (mySerial.available())
+  while (mySerial.available())
+  {
+    char c = mySerial.read();
+    Serial.print(c);
+    if ((c == '\r')||(c == '\n')||(c == '#')) // End of message
     {
-        char c = mySerial.read();
-        Serial.print(c);
-        if (c == '\n') // End of message
-        {
-            sBuffer = ""; // Clear buffer
-            Serial.print("La chaine complète:");
-            Serial.println(sBuffer);
-        }
-        else
-        {
-            sBuffer += c; // Append character to buffer
-            //Serial.println("En cours");
-        }
+        Serial.print("La chaine complète:");
+        Serial.println(sBuffer);
+        sBuffer = ""; // Clear buffer
+    }
+    else
+    {
+        sBuffer += c; // Append character to buffer
+        //Serial.println("En cours");
     }
   }
 }
